@@ -1,0 +1,143 @@
+.header-logo img{
+    position: relative;
+    display: inline-block;
+    top: -90px;
+    left: -4px;
+}
+.header-search-bar{
+    position: relative;
+    display: inline-block;
+    top: -250px;
+    left: 390px;
+}
+
+/*.header-genre-box{
+    position: relative;
+    display: inline-block;
+    top: -250px;
+    left: 440px;
+}*/
+.header-genre-box .type-1{
+    position: relative;
+    display: inline-block;
+    top: -270px;
+    left: 620px;
+}
+.header-genre-box .type-2{
+    position: relative;
+    display: inline-block;
+    top: -270px;
+    left: 640px;
+}
+.header-genre-box .type-3{
+    position: relative;
+    display: inline-block;
+    top: -270px;
+    left: 660px;
+}
+.header-genre-box .type-4{
+    position: relative;
+    display: inline-block;
+    top: -270px;
+    left: 680px;
+}
+.header-genre-box .genre-submit{
+    position: relative;
+    display: inline-block;
+    top: -270px;
+    left: 690px;
+}
+#videos{
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+	margin: 2px 5px;
+    padding: 10px;
+    top: -210px;
+    left: -10px;
+}
+.video{
+	display: inline-block;
+	width: 350px;
+	height: 350px;
+	padding: 5px;
+	margin: 8px;
+	border: 1px solid rgb(231, 160, 171);
+	border-radius: 4%;
+}
+.video-contents{
+    position: relative;
+    display: inline-block;
+    top: -50px;
+    left: 10px;
+    margin: 5px;
+	width: 340px;
+	height: 340px;
+}
+.video-url{
+    display: block;
+    position: relative;
+}
+.video-caption{
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+footer{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+#new-video-modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(231, 206, 206, 0.85);
+}
+#modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1010;
+    overflow: scroll;
+}
+.hidden {
+    display: none;
+}
+.dialog-box{
+    width: auto;
+    max-width: 600px;
+    min-width: 350px;
+    min-height: 300px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 15px;
+
+}
+.dialog-header{
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+}
+.dialog-header h3{
+    margin: 0;
+}
+.dialog-header .dialog-hide-button{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    padding: 0;
+}
+
+
+
+
+
