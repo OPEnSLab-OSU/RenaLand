@@ -2,47 +2,42 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv= "X-UA-Compatible" content="ie-edge">
         <title>RenaLand</title>
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
     </head>
     <body>
         <header>
-            <div class="header-logo">
-                <img src="CS290FPLogo.png" alt=logo width="300" height="300">
+            <div class="header-logo"> 
+                <a href="index.html">
+                    <img src="CS290FPLogo.png">
+                </a>
             </div>
-            <div class="header-search-bar">
-                <input type="text" placeholder="Search..." name="search">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="header-genre-box">
-                    <div class="type-1">
-                            <input type="checkbox" name="genres-container" id="genre-1" value="genre 1">
-                            <label for="genre-1">genre-1</label>
-                    </div>
-                    <div class="type-2">
-                            <input type="checkbox" name="genres-container" id="genre-2" value="genre 2">
-                            <label for="genre-2">genre-2</label>
-                    </div>
-                    <div class="type-3">
-                            <input type="checkbox" name="genres-container" id="genre-3" value="genre 3">
-                            <label for="genre-1">genre-3</label>
-                    </div>
-                    <div class="type-4">
-                            <input type="checkbox" name="genres-container" id="genre-4" value="genre 4">
-                            <label for="genre-4">genre-4</label>
-                    </div>
-                    <input type="submit" class="genre-submit" value="Submit">
-            </div>
+
+           
+
+            <div class="search">
+                <div id="search1">
+                  <object align= right>
+                    <form method="POST" action="#">
+                      <input type="text" name="search" placeholder="type ..">
+                      <input type="submit" value="search here">
+                    </form>
+                  </object>
+                </div>
+              </div>
         </header>
         <main class="body-content">
             <section id="videos">
                 <div class="video" data-genre="">
                     <div class="video-contents">
                         <div class="video-url">
-                            <video width="320" height="320" controls>
-                                    <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
+                            <video class='myVideo' width="612" height="612" controls>
+                                    <source src="video1.mp4" type="video/mp4">
                             </video>
+                            </script>
                         </div>
                         <div class="video-caption">
                             video 1
@@ -52,9 +47,9 @@
                 <div class="video" data-genre="">
                     <div class="video-contents">
                         <div class="video-url">
-                            <video width="320" height="320" controls>
-                                    <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
-                            </video>
+                            <video class='myVideo' width="612" height="612" controls>
+                                    <source src="video2.mp4" type="video/mp4">
+                            </video>                       
                         </div>
                         <div class="video-caption">
                             video 2
@@ -64,8 +59,8 @@
                 <div class="video" data-genre="">
                     <div class="video-contents">
                         <div class="video-url">
-                            <video width="320" height="320" controls>
-                                <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
+                            <video class='myVideo' width="612" height="612" controls>
+                                <source src="video3.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="video-caption">
@@ -76,8 +71,8 @@
                 <div class="video" data-genre="">
                         <div class="video-contents">
                             <div class="video-url">
-                                <video width="320" height="320" controls>
-                                        <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="video4.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <div class="video-caption">
@@ -88,8 +83,8 @@
                 <div class="video" data-genre="">
                         <div class="video-contents">
                             <div class="video-url">
-                                <video width="320" height="320" controls>
-                                        <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="video5.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <div class="video-caption">
@@ -100,7 +95,7 @@
                 <div class="video" data-genre="">
                         <div class="video-contents">
                             <div class="video-url">
-                                <video width="320" height="320" controls>
+                                <video id='myVideo' width="612" height="612" controls>
                                         <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
                                 </video>
                             </div>
@@ -112,7 +107,7 @@
                 <div class="video" data-genre="">
                         <div class="video-contents">
                             <div class="video-url">
-                                <video width="320" height="320" controls>
+                                <video id='myVideo' width="612" height="612" controls>
                                         <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
                                 </video>
                             </div>
@@ -124,7 +119,7 @@
                 <div class="video" data-genre="">
                         <div class="video-contents">
                             <div class="video-url">
-                                <video width="320" height="320" controls>
+                                <video id='myVideo' width="612" height="612" controls>
                                         <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
                                 </video>
                             </div>
@@ -133,6 +128,32 @@
                             </div>
                         </div>
                 </div>
+                <script>
+                    let options = {
+                        root: null,
+                        rooMargin: '0px', 
+                        threshold: 1.0
+                    };
+                    let callback = (entries, observer)=>{
+                        entries.forEach(entry => {
+                            if(entry.target.className == "myVideo") {
+                                if (entry.isIntersecting) {
+                                    entry.target.play();
+                                }
+                                else {
+                                    entry.target.pause();
+                                }
+                            }
+                        });
+                    }
+                    let observer = new IntersectionObserver(callback, options);
+                    observer.observe(document.getElementsByClassName("myVideo")[0]);
+                    observer.observe(document.getElementsByClassName("myVideo")[1]);
+                    observer.observe(document.getElementsByClassName("myVideo")[2]);
+                    observer.observe(document.getElementsByClassName("myVideo")[3]);
+                    observer.observe(document.getElementsByClassName("myVideo")[4]);
+
+                </script>
             </section>
         </main>
         <footer>

@@ -1,14 +1,16 @@
+.header-logo {
+    position: fixed;
+}
+
 .header-logo img{
     position: relative;
     display: inline-block;
-    top: -90px;
+    top: -50px;
     left: -4px;
 }
-.header-search-bar{
+.search {
     position: relative;
-    display: inline-block;
-    top: -250px;
-    left: 390px;
+    top: 45px;
 }
 
 /*.header-genre-box{
@@ -50,30 +52,33 @@
 #videos{
     position: relative;
     display: inline-flex;
-    flex-direction: row;
+    flex-direction: column;
 	flex-wrap: wrap;
 	margin: 2px 5px;
     padding: 10px;
-    top: -210px;
-    left: -10px;
+    top: 100px;
+    left: 600px;
 }
 .video{
-	display: inline-block;
-	width: 350px;
-	height: 350px;
+    display: inline-block;
+    
+	width: 612px;
+	height: 700px;
 	padding: 5px;
 	margin: 8px;
 	border: 1px solid rgb(231, 160, 171);
-	border-radius: 4%;
+    border-radius: 4%;
+    
 }
 .video-contents{
     position: relative;
-    display: inline-block;
+    display: inline-block; 
     top: -50px;
-    left: 10px;
+    left: -5px;
     margin: 5px;
 	width: 340px;
-	height: 340px;
+    height: 340px;
+    
 }
 .video-url{
     display: block;
@@ -85,11 +90,63 @@
     top: 10px;
     left: 10px;
 }
-footer{
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
+
+.myVideo {
+    position: relative;
+    top: 80px; 
 }
+
+footer{
+  margin: 0;
+  position: fixed;
+  top: 95%;
+  left: 40%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+.arrow-up {
+    border-radius: 10px;
+}
+
+.arrow-down {
+    border-radius: 10px;
+}
+
+.upload-video {
+    border-radius: 10px;
+}
+
+.fas:hover {
+    height: 60px;
+    width: 150px;
+}
+
+
+.fas{
+    height: 50px;
+    width: 100px;
+}
+
+.fa-arrow-up {
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+}
+
+.fa-plus-circle {
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+}
+
+.fa-arrow-down {
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+}
+
 
 #new-video-modal{
     position: fixed;
@@ -114,7 +171,7 @@ footer{
 }
 .dialog-box{
     width: auto;
-    max-width: 600px;
+    max-width: 1000px;
     min-width: 350px;
     min-height: 300px;
     margin: 40px auto;
