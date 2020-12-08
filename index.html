@@ -12,26 +12,46 @@
         <header>
             <div class="header-logo"> 
                 <a href="index.html">
-                    <img src="CS290FPLogo.png">
+                    <img src="CS290FPLogo.png" width="280" height="280">
                 </a>
             </div>
-
-           
-
             <div class="search">
                 <div id="search1">
                   <object align= right>
                     <form method="POST" action="#">
-                      <input type="text" name="search" placeholder="type ..">
-                      <input type="submit" value="search here">
+                      <input type="text" name="search" class="type" placeholder="type ..">
+                      <input type="submit" class="searchbtn" value="search here">
                     </form>
                   </object>
                 </div>
-              </div>
+            </div>
+            <div class="genre-box">
+                <div class="genre">
+                    <input type="checkbox" name="type" id="genre-1" value="genre-1">
+                    <label for="genre-1">funny</label>
+                </div>
+                <div class="genre">
+                    <input type="checkbox" name="type" id="genre-2" value="genre-2">
+                    <label for="genre-2">cartoon</label>
+                </div>
+                <div class="genre">
+                    <input type="checkbox" name="type" id="genre-3" value="genre-3">
+                    <label for="genre-3">music</label>
+                </div>
+                <div class="genre">
+                    <input type="checkbox" name="type" id="genre-4" value="genre-4">
+                    <label for="genre-4">academic</label>
+                </div>
+                <div class="genre">
+                    <input type="checkbox" name="type" id="other" value="other">
+                    <label for="other">other</label>
+                </div>
+                <input type="submit" class="genre-submit" value="update">
+            </div>
         </header>
         <main class="body-content">
             <section id="videos">
-                <div class="video" data-genre="">
+                <div class="video" data-genre="funny">
                     <div class="video-contents">
                         <div class="video-url">
                             <video class='myVideo' width="612" height="612" controls>
@@ -40,11 +60,11 @@
                             </script>
                         </div>
                         <div class="video-caption">
-                            video 1
+                            after seeing my GPA
                         </div>
                     </div>
                 </div>
-                <div class="video" data-genre="">
+                <div class="video" data-genre="funny">
                     <div class="video-contents">
                         <div class="video-url">
                             <video class='myVideo' width="612" height="612" controls>
@@ -52,11 +72,11 @@
                             </video>                       
                         </div>
                         <div class="video-caption">
-                            video 2
+                            ski mask hiphop
                         </div>
                     </div>
                 </div>
-                <div class="video" data-genre="">
+                <div class="video" data-genre="funny">
                     <div class="video-contents">
                         <div class="video-url">
                             <video class='myVideo' width="612" height="612" controls>
@@ -64,11 +84,11 @@
                             </video>
                         </div>
                         <div class="video-caption">
-                            video 3
+                            crazy with my code
                         </div>
                     </div>
                 </div>
-                <div class="video" data-genre="">
+                <div class="video" data-genre="funny">
                         <div class="video-contents">
                             <div class="video-url">
                                 <video class='myVideo' width="612" height="612" controls>
@@ -76,11 +96,11 @@
                                 </video>
                             </div>
                             <div class="video-caption">
-                                video 4
+                                double crash
                             </div>
                         </div>
                 </div>
-                <div class="video" data-genre="">
+                <div class="video" data-genre="funny">
                         <div class="video-contents">
                             <div class="video-url">
                                 <video class='myVideo' width="612" height="612" controls>
@@ -88,45 +108,57 @@
                                 </video>
                             </div>
                             <div class="video-caption">
-                                video 5
+                                mom sick in bed
                             </div>
                         </div>
                 </div>
-                <div class="video" data-genre="">
+                <div class="video" data-genre="cartoon">
                         <div class="video-contents">
                             <div class="video-url">
-                                <video id='myVideo' width="612" height="612" controls>
-                                        <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="video8.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <div class="video-caption">
-                                video 6
+                                watch your feelings
                             </div>
                         </div>
                 </div>
-                <div class="video" data-genre="">
+                <div class="video" data-genre="music">
                         <div class="video-contents">
                             <div class="video-url">
-                                <video id='myVideo' width="612" height="612" controls>
-                                        <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="video7.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <div class="video-caption">
-                                video 7
+                                a whole new world(Aladdin)
                             </div>
                         </div>
                 </div>
-                <div class="video" data-genre="">
+                <div class="video" data-genre="academic">
                         <div class="video-contents">
                             <div class="video-url">
-                                <video id='myVideo' width="612" height="612" controls>
-                                        <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="video6.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <div class="video-caption">
-                                video 8
+                                the power of computer science
                             </div>
                         </div>
+                </div>
+                <div class="video" data-genre="other">
+                    <div class="video-contents">
+                        <div class="video-url">
+                            <video class='myVideo' width="612" height="612" controls>
+                                    <source src="video9.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-caption">
+                            a day in the life of a CS intern
+                        </div>
+                    </div>
                 </div>
                 <script>
                     let options = {
@@ -178,23 +210,27 @@
                         <input type="text" id="new-caption-input">
                     </div>
                     <div class="new-input-element">
-                        <fieldset class="new-genre-fieldset">
-                            <legend>Genres</legend>
+                        <fieldset class="genre-box-fieldset">
+                            <legend>Genre</legend>
                             <div>
-                                <input type="checkbox" name="new-genre" id="new-genre-1" value="genre 1" checked>
-                                <label for="new-genre-1">genre-1</label>
+                              <input type="checkbox" name="video-genre" id="video-genre-1" value="funny" checked>
+                              <label for="video-genre-1">funny</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="new-genre" id="new-genre-2" value="genre 2">
-                                <label for="new-genre-2">genre-2</label>
+                              <input type="checkbox" name="video-genre" id="video-genre-2" value="cartoon">
+                              <label for="video-genre-2">cartoon</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="new-genre" id="new-genre-3" value="genre 3">
-                                <label for="new-genre-3">genre-3</label>
+                              <input type="checkbox" name="video-genre" id="video-genre-3" value="music">
+                              <label for="video-genre-3">music</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="new-genre" id="new-genre-4" value="genre 4">
-                                <label for="new-genre-4">genre-4</label>
+                              <input type="checkbox" name="video-genre" id="video-genre-4" value="academic">
+                              <label for="video-genre-4">academic</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="other" value="other">
+                              <label for="other">other</label>
                             </div>
                         </fieldset>
                     </div>

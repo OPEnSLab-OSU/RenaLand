@@ -1,3 +1,6 @@
+body{
+    background-image: url("background.jpg");
+}
 .header-logo {
     position: fixed;
 }
@@ -5,50 +8,52 @@
 .header-logo img{
     position: relative;
     display: inline-block;
-    top: -50px;
-    left: -4px;
+    top: -70px;
+    left: 4px;
 }
 .search {
     position: relative;
-    top: 45px;
+    display: inline-block;
+    top: 70px;
+    left: 670px;
+}
+.type{
+    width: 250px;
+    height: 30px;
+    border: 2px solid lightpink;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.searchbtn{
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: lightpink;
 }
 
-/*.header-genre-box{
+.genre-box{
     position: relative;
     display: inline-block;
-    top: -250px;
-    left: 440px;
-}*/
-.header-genre-box .type-1{
-    position: relative;
-    display: inline-block;
-    top: -270px;
-    left: 620px;
+    top: 60px;
+    right: -800px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: lightpink;
 }
-.header-genre-box .type-2{
+.genre-box .genre{
     position: relative;
     display: inline-block;
-    top: -270px;
-    left: 640px;
+    padding: 3px;
+    margin: 5px;
 }
-.header-genre-box .type-3{
-    position: relative;
-    display: inline-block;
-    top: -270px;
-    left: 660px;
+.genre-box .genre-submit{
+    padding: 3px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: whitesmoke;
 }
-.header-genre-box .type-4{
-    position: relative;
-    display: inline-block;
-    top: -270px;
-    left: 680px;
-}
-.header-genre-box .genre-submit{
-    position: relative;
-    display: inline-block;
-    top: -270px;
-    left: 690px;
-}
+
 #videos{
     position: relative;
     display: inline-flex;
@@ -57,25 +62,25 @@
 	margin: 2px 5px;
     padding: 10px;
     top: 100px;
-    left: 600px;
+    left: 480px;
 }
 .video{
     display: inline-block;
     
-	width: 612px;
-	height: 700px;
+	width: 640px;
+	height: 710px;
 	padding: 5px;
 	margin: 8px;
-	border: 1px solid rgb(231, 160, 171);
+	border: 2px solid lightpink;
     border-radius: 4%;
     
 }
 .video-contents{
     position: relative;
     display: inline-block; 
-    top: -50px;
-    left: -5px;
-    margin: 5px;
+    top: -40px;
+    left: 5px;
+    margin: 10px;
 	width: 340px;
     height: 340px;
     
@@ -87,40 +92,53 @@
 .video-caption{
     display: block;
     position: relative;
-    top: 10px;
-    left: 10px;
+    top: 76px;
+    left: 130px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
 }
 
 .myVideo {
     position: relative;
-    top: 80px; 
+    top: 60px; 
 }
 
 footer{
   margin: 0;
   position: fixed;
   top: 95%;
-  left: 40%;
+  left: 39%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
 
 .arrow-up {
-    border-radius: 10px;
+    border: none;
+    background: none;
+    font-size: 35px;
+    
 }
 
 .arrow-down {
-    border-radius: 10px;
+    border: none;
+    background: none;
+    font-size: 35px;
 }
 
 .upload-video {
-    border-radius: 10px;
+    border: none;
+    background: none;
+    font-size:35px;
 }
 
 .fas:hover {
     height: 60px;
     width: 150px;
+    font-size: 40px;
+    transform: scale(1.1,1.1);
 }
 
 
@@ -132,19 +150,22 @@ footer{
 .fa-arrow-up {
     position: relative;
     top: 10px;
-    font-size: 25px;
+    font-size: 35px;
+    color: rgb(173, 81, 95);
 }
 
 .fa-plus-circle {
     position: relative;
     top: 10px;
-    font-size: 25px;
+    font-size: 35px;
+    color: rgb(173, 81, 95);
 }
 
 .fa-arrow-down {
     position: relative;
     top: 10px;
-    font-size: 25px;
+    font-size: 35px;
+    color: rgb(173, 81, 95);
 }
 
 
@@ -155,7 +176,7 @@ footer{
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgba(231, 206, 206, 0.85);
+    background-color: rgb(214, 204, 204);
 }
 #modal{
     position: fixed;
@@ -171,28 +192,89 @@ footer{
 }
 .dialog-box{
     width: auto;
-    max-width: 1000px;
-    min-width: 350px;
-    min-height: 300px;
+    max-width: 500px;
+    min-width: 400px;
+    min-height: 500px;
     margin: 40px auto;
-    background-color: #fff;
+    background-color: rgb(250, 199, 206);
     border-radius: 15px;
 
 }
 .dialog-header{
     position: relative;
     display: block;
-    padding: 10px 20px;
+    padding: 10px 10px;
+    margin: 5px;
 }
 .dialog-header h3{
-    margin: 0;
+    margin: 2px;
+    font-size: 25px;
 }
 .dialog-header .dialog-hide-button{
     position: absolute;
     right: 10px;
     top: 5px;
-    padding: 0;
+    padding: 2px;
+    border: none;
+    background: none;
+    font-size: 25px;
 }
+.dialog-body .new-input-element{
+    position: relative;
+    display: block;
+    margin: 10px;
+    padding: 5px;
+}
+.new-input-element #new-url-input{
+    margin: 5px;
+    width: 250px;
+    height: 25px;
+}
+.new-input-element #new-caption-input{
+    margin: 5px;
+    width: 250px;
+    height: 25px;
+}
+.new-input-element .genre-box-fieldset{
+    width: 330px;
+    height: 200px;
+}
+fieldset div{
+    position: relative;
+    display: block;
+    margin: 10px;
+}
+fieldset label{
+    font-size: 20px;
+}
+.dialog-body label{
+    font-size: 20px;
+}
+legend{
+    font-size: 20px;
+}
+.cancel-button{
+    position: relative;
+    display: inline-block;
+    left: 10px;
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+}
+.upload-button{
+    position: relative;
+    display: inline-block;
+    left: 20px;
+    bottom: 0%;
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+}
+
 
 
 
