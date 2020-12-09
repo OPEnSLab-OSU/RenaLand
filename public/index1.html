@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv= "X-UA-Compatible" content="ie-edge">        <title>RenaLand</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+        <script src="/index.js" charset="utf-8" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-logo"> 
+                <a href="index1.html">
+                    <img src="CS290FPLogo.png" width="280" height="280">
+                </a>
+            </div>
+            <div class="search">
+                <div id="search1">
+                  <object align= right>
+                    <form method="POST" action="#">
+                      <input type="text" name="search" class="type" placeholder="type ..">
+                      <button id="filter-update-button" class="searchbtn">Search</button>
+                    </form>
+                  </object>
+                </div>
+            </div>
+            <div class="genre-box">
+                <div class="genre">
+                    <input type="checkbox" name="type" id="genre-1" value="funny">
+                    <label for="genre-1">Funny</label>
+                </div>
+                <div class="genre">
+                    <input type="checkbox" name="type" id="genre-2" value="cartoon">
+                    <label for="genre-2">Cartoon</label>
+                </div>
+                <div class="genre">
+                    <input type="checkbox" name="type" id="genre-3" value="music">
+                    <label for="genre-3">Music</label>
+                </div>
+                <div class="genre">
+                    <input type="checkbox" name="type" id="genre-4" value="academic">
+                    <label for="genre-4">Academic</label>
+                </div>
+                <div class="genre">
+                    <input type="checkbox" name="type" id="other" value="other">
+                    <label for="other">Others</label>
+                </div>
+            </div>
+            <div class="update">
+                <button id="filter-update-button" class="updatebtn">Update</button>
+            </div>
+        </header>
+        <main class="body-content">
+            <section id="videos">
+                <div class="video" data-genre="funny">
+                    <div class="video-contents">
+                        <div class="video-url">
+                            <video class='myVideo' width="612" height="612" controls>
+                                    <source src="video1.mp4" type="video/mp4">
+                            </video>
+                            </script>
+                        </div>
+                        <div class="video-caption">
+                            after seeing my GPA
+                        </div>
+                    </div>
+                </div>
+                <div class="video" data-genre="funny">
+                    <div class="video-contents">
+                        <div class="video-url">
+                            <video class='myVideo' width="612" height="612" controls>
+                                    <source src="video2.mp4" type="video/mp4">
+                            </video>                       
+                        </div>
+                        <div class="video-caption">
+                            ski mask hiphop
+                        </div>
+                    </div>
+                </div>
+                <div class="video" data-genre="funny">
+                    <div class="video-contents">
+                        <div class="video-url">
+                            <video class='myVideo' width="612" height="612" controls>
+                                <source src="video3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-caption">
+                            crazy with my code
+                        </div>
+                    </div>
+                </div>
+                <div class="video" data-genre="funny">
+                        <div class="video-contents">
+                            <div class="video-url">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="video4.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-caption">
+                                double crash
+                            </div>
+                        </div>
+                </div>
+                <div class="video" data-genre="funny">
+                        <div class="video-contents">
+                            <div class="video-url">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="video5.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-caption">
+                                mom sick in bed
+                            </div>
+                        </div>
+                </div>
+                <div class="video" data-genre="cartoon">
+                        <div class="video-contents">
+                            <div class="video-url">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="video8.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-caption">
+                                watch your feelings
+                            </div>
+                        </div>
+                </div>
+                <div class="video" data-genre="music">
+                        <div class="video-contents">
+                            <div class="video-url">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="video7.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-caption">
+                                a whole new world(Aladdin)
+                            </div>
+                        </div>
+                </div>
+                <div class="video" data-genre="academic">
+                        <div class="video-contents">
+                            <div class="video-url">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="video6.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-caption">
+                                the power of computer science
+                            </div>
+                        </div>
+                </div>
+                <div class="video" data-genre="other">
+                    <div class="video-contents">
+                        <div class="video-url">
+                            <video class='myVideo' width="612" height="612" controls>
+                                    <source src="video9.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-caption">
+                            a day in the life of a CS intern
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    let options = {
+                        root: null,
+                        rooMargin: '0px', 
+                        threshold: 1.0
+                    };
+                    let callback = (entries, observer)=>{
+                        entries.forEach(entry => {
+                            if(entry.target.className == "myVideo") {
+                                if (entry.isIntersecting) {
+                                    entry.target.play();
+                                }
+                                else {
+                                    entry.target.pause();
+                                }
+                            }
+                        });
+                    }
+                    let observer = new IntersectionObserver(callback, options);
+                    observer.observe(document.getElementsByClassName("myVideo")[0]);
+                    observer.observe(document.getElementsByClassName("myVideo")[1]);
+                    observer.observe(document.getElementsByClassName("myVideo")[2]);
+                    observer.observe(document.getElementsByClassName("myVideo")[3]);
+                    observer.observe(document.getElementsByClassName("myVideo")[4]);
+                    observer.observe(document.getElementsByClassName("myVideo")[5]);
+                    observer.observe(document.getElementsByClassName("myVideo")[6]);
+                    observer.observe(document.getElementsByClassName("myVideo")[7]);
+                    observer.observe(document.getElementsByClassName("myVideo")[8]);
+
+                </script>
+            </section>
+        </main>
+        <footer>
+            <button type="button" class="arrow-up"><i class="fas fa-arrow-up"></i></button>
+            <button type="button" class="upload-video"><i class="fas fa-plus-circle"></i></button>
+            <button type="button" class="arrow-down"><i class="fas fa-arrow-down"></i></button>
+        </footer>
+        <div class="hidden" id="new-video-modal"></div>
+        <div id="modal" class="hidden">
+            <div class="dialog-box">
+                <div class="dialog-header">
+                    <h3>Upload a New Video</h3>
+                    <button type="button" class="dialog-hide-button">&times;</button>
+                </div>
+                <div class="dialog-body">
+                    <div class="new-input-element">
+                        <label for="new-url-input">Video URL</label>
+                        <input type="text" id="new-url-input">
+                    </div>
+                    <div class="new-input-element">
+                        <label for="new-caption-input">Video Caption</label>
+                        <input type="text" id="new-caption-input">
+                    </div>
+                    <div class="new-input-element">
+                        <fieldset class="genre-box-fieldset">
+                            <legend>Genre</legend>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="video-genre-1" value="funny" checked>
+                              <label for="video-genre-1">funny</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="video-genre-2" value="cartoon">
+                              <label for="video-genre-2">cartoon</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="video-genre-3" value="music">
+                              <label for="video-genre-3">music</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="video-genre-4" value="academic">
+                              <label for="video-genre-4">academic</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="other" value="other">
+                              <label for="other">other</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="dialog-footer">
+                    <button type="button" class="cancel-button">Cancel</button>
+                    <button type="button" class="upload-button">Upload Video</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
