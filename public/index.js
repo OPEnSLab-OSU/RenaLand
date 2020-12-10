@@ -1,33 +1,75 @@
 var upButton = document.getElementById("arrow-up");
 var downButton = document.getElementById("arrow-down");
 var uploadButton = document.getElementById("upload-video");
+var xButton = document.getElementsByClassName("dialog-hide-button")[0];
+var cancelButton = document.getElementsByClassName("dialog-hide-button cancel-button")[0];
+var uploadVideo = document.getElementsByClassName("upload-button")[0];
+
+
+function modalClear() {
+    document.getElementById("new-url-input").value = "";
+    document.getElementById("new-caption-input").value = "";
+}
+
+
+function validInput() {
+    if (
+        document.getElementById("new-url-input").value == "" ||
+        document.getElementById("new-caption-input").value == "") {
+        return false;
+    }   
+    else {
+        return true;
+    }
+}
 
 upButton.onclick = function() {
     var rootElement = document.documentElement;
     rootElement.scrollTo({
         top: 0,
         behavior: "smooth"
-      });
+    });
 }
 
 downButton.onclick = function() {
     var rootElement = document.documentElement;
-    rootElement.scrollTo({
-        bottom: 0,
-        behavior: "smooth"
-      });
+    rootElement.scrollTo(0, document.body.scrollHeight);
 }
 
 uploadButton.onclick = function() {
     modal.style.display = "block";
-    document.getElementById("modal-backdrop").classList.toggle("hidden");
 }
+
+xButton.onclick = function() {
+    modal.style.display = "none";
+    modalClear();
+
+}
+
+cancelButton.onclick = function() {
+    modal.style.display = "none";
+    modalClear();
+
+}
+
+uploadVideo.onclick = function() {
+    if (validInput() == false) {
+        alert("Incomplete fields.");
+        return;
+    }
+}
+
+
+
+
+
 
 let options = {
     root: null,
     rooMargin: '0px', 
     threshold: 1.0
 };
+
 let callback = (entries, observer)=>{
     entries.forEach(entry => {
         if(entry.target.className == "myVideo") {
