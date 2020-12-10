@@ -96,12 +96,6 @@ observer.observe(document.getElementsByClassName("myVideo")[8]);
 
 
 
-
-
-
-
-
-
 function newVideo (caption, videoFile, genre) {
     var context = {
         caption: caption,
@@ -116,11 +110,6 @@ function newVideo (caption, videoFile, genre) {
 
 }
 
-
-function acceptPost() {
-    var caption = document.getElementsByClassName("video-caption").value.trim();
-
-}
 
 
 
