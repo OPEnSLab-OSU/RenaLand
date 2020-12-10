@@ -4,7 +4,7 @@ var uploadButton = document.getElementById("upload-video");
 var xButton = document.getElementsByClassName("dialog-hide-button")[0];
 var cancelButton = document.getElementsByClassName("dialog-hide-button cancel-button")[0];
 var uploadVideo = document.getElementsByClassName("upload-button")[0];
-
+var searchButton = document.getElementsByClassName("searchbtn")[0];
 
 function modalClear() {
     document.getElementById("new-url-input").value = "";
@@ -59,7 +59,22 @@ uploadVideo.onclick = function() {
     }
 }
 
+searchButton.onclick = function() {
+    var videoArr = document.getElementsByClassName("video");
+    var captionText = document.getElementById("type").value.toLowerCase();
 
+    for (var i = videoArr.length - 1; i >= 0; i--) {
+        var videoText = document.getElementsByClassName("video-caption")[i].childNodes[0].textContent.toLowerCase();
+        var bool = false;
+        if (videoText.indexOf(captionText.toLowerCase()) == -1 && captionText !== "") {
+            bool = true;
+            videoArr[i].remove();
+        }
+    }
+    console.log("Hello");
+
+
+}
 
 
 
