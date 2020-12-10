@@ -3,16 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv= "X-UA-Compatible" content="ie-edge">
-        <title>RenaLand</title>
+        <meta http-equiv= "X-UA-Compatible" content="ie-edge">        <title>RenaLand</title>
         <link rel="stylesheet" href="index.css">
         <script src="index.js" charset="utf-8" defer></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+        <script src="/index.js" charset="utf-8" defer></script>
     </head>
     <body>
         <header>
             <div class="header-logo"> 
-                <a href="index.html">
+                <a href="index1.html">
                     <img src="CS290FPLogo.png" width="280" height="280">
                 </a>
             </div>
@@ -21,7 +21,7 @@
                   <object align= right>
                     <form method="POST" action="#">
                       <input type="text" name="search" class="type" placeholder="type ..">
-                      <input type="submit" class="searchbtn" value="search here">
+                      <button id="filter-update-button" class="searchbtn">Search</button>
                     </form>
                   </object>
                 </div>
@@ -29,25 +29,27 @@
             <div class="genre-box">
                 <div class="genre">
                     <input type="checkbox" name="type" id="genre-1" value="funny">
-                    <label for="genre-1">funny</label>
+                    <label for="genre-1">Funny</label>
                 </div>
                 <div class="genre">
                     <input type="checkbox" name="type" id="genre-2" value="cartoon">
-                    <label for="genre-2">cartoon</label>
+                    <label for="genre-2">Cartoon</label>
                 </div>
                 <div class="genre">
                     <input type="checkbox" name="type" id="genre-3" value="music">
-                    <label for="genre-3">music</label>
+                    <label for="genre-3">Music</label>
                 </div>
                 <div class="genre">
                     <input type="checkbox" name="type" id="genre-4" value="academic">
-                    <label for="genre-4">academic</label>
+                    <label for="genre-4">Academic</label>
                 </div>
                 <div class="genre">
                     <input type="checkbox" name="type" id="other" value="other">
-                    <label for="other">other</label>
+                    <label for="other">Others</label>
                 </div>
-                <input type="submit" class="genre-submit" value="update">
+            </div>
+            <div class="update">
+                <button id="filter-update-button" class="updatebtn">Update</button>
             </div>
         </header>
         <main class="body-content">
@@ -185,6 +187,10 @@
                     observer.observe(document.getElementsByClassName("myVideo")[2]);
                     observer.observe(document.getElementsByClassName("myVideo")[3]);
                     observer.observe(document.getElementsByClassName("myVideo")[4]);
+                    observer.observe(document.getElementsByClassName("myVideo")[5]);
+                    observer.observe(document.getElementsByClassName("myVideo")[6]);
+                    observer.observe(document.getElementsByClassName("myVideo")[7]);
+                    observer.observe(document.getElementsByClassName("myVideo")[8]);
 
                 </script>
             </section>

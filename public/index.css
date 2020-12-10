@@ -16,6 +16,7 @@ body{
     display: inline-block;
     top: 70px;
     left: 670px;
+    
 }
 .type{
     width: 250px;
@@ -25,6 +26,9 @@ body{
     font-size: 20px;
 }
 .searchbtn{
+    position: relative;
+    left: 10px;
+    bottom: 3px;
     height: 35px;
     border: 1px solid black;
     border-radius: 15px;
@@ -46,12 +50,16 @@ body{
     padding: 3px;
     margin: 5px;
 }
-.genre-box .genre-submit{
+.updatebtn{
+    position: relative;
+    left: 1585px;
+    top: 18px;
     padding: 3px;
     margin: 5px;
     border: 1px solid black;
-    border-radius: 5px;
-    background-color: whitesmoke;
+    border-radius: 15px;
+    background-color: lightpink;
+    height: 35px;
 }
 
 #videos{
