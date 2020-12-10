@@ -1,0 +1,31 @@
+{
+  "name": "final-project-team-11",
+  "version": "1.0.0",
+  "description": "a web application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "prestart": "npm run build",
+    "predev": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osu-cs290-f20/final-project-team-11.git"
+  },
+  "author": "Haichao Yang, Benjamin Cha, Sam Jadzak, Tobias Florian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osu-cs290-f20/final-project-team-11/issues"
+  },
+  "homepage": "https://github.com/osu-cs290-f20/final-project-team-11#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "handlebars": "^4.7.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
