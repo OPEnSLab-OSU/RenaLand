@@ -4,10 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv= "X-UA-Compatible" content="ie-edge">        <title>RenaLand</title>
-        <link rel="stylesheet" href="index.css">
         <script src="index.js" charset="utf-8" defer></script>
+        <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
-        <script src="/index.js" charset="utf-8" defer></script>
     </head>
     <body>
         <header>
@@ -20,7 +19,7 @@
                 <div id="search1">
                   <object align= right>
                     <form method="POST" action="#">
-                      <input type="text" name="search" class="type" placeholder="type ..">
+                      <input type="text" name="search" class="type" placeholder="Search...">
                       <button id="filter-update-button" class="searchbtn">Search</button>
                     </form>
                   </object>
@@ -52,6 +51,8 @@
                 <button id="filter-update-button" class="updatebtn">Update</button>
             </div>
         </header>
+
+
         <main class="body-content">
             <section id="videos">
                 <div class="video" data-genre="funny">
@@ -163,42 +164,12 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    let options = {
-                        root: null,
-                        rooMargin: '0px', 
-                        threshold: 1.0
-                    };
-                    let callback = (entries, observer)=>{
-                        entries.forEach(entry => {
-                            if(entry.target.className == "myVideo") {
-                                if (entry.isIntersecting) {
-                                    entry.target.play();
-                                }
-                                else {
-                                    entry.target.pause();
-                                }
-                            }
-                        });
-                    }
-                    let observer = new IntersectionObserver(callback, options);
-                    observer.observe(document.getElementsByClassName("myVideo")[0]);
-                    observer.observe(document.getElementsByClassName("myVideo")[1]);
-                    observer.observe(document.getElementsByClassName("myVideo")[2]);
-                    observer.observe(document.getElementsByClassName("myVideo")[3]);
-                    observer.observe(document.getElementsByClassName("myVideo")[4]);
-                    observer.observe(document.getElementsByClassName("myVideo")[5]);
-                    observer.observe(document.getElementsByClassName("myVideo")[6]);
-                    observer.observe(document.getElementsByClassName("myVideo")[7]);
-                    observer.observe(document.getElementsByClassName("myVideo")[8]);
-
-                </script>
             </section>
         </main>
         <footer>
-            <button type="button" class="arrow-up"><i class="fas fa-arrow-up"></i></button>
-            <button type="button" class="upload-video"><i class="fas fa-plus-circle"></i></button>
-            <button type="button" class="arrow-down"><i class="fas fa-arrow-down"></i></button>
+            <button type="button" id="arrow-up"><i class="fas fa-arrow-up"></i></button>
+            <button type="button" id="upload-video"><i class="fas fa-plus-circle"></i></button>
+            <button type="button" id="arrow-down"><i class="fas fa-arrow-down"></i></button>      
         </footer>
         <div class="hidden" id="new-video-modal"></div>
         <div id="modal" class="hidden">
