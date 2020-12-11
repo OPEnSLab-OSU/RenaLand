@@ -52,8 +52,7 @@ app.post('/addVideo/', function (req, res, next) {
         else {
           res.status(200).send("successful");
         }
-      }
-    );
+    });
   }
   else {
     next();
