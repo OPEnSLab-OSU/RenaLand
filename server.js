@@ -31,13 +31,13 @@ app.get('/index2.html', function(req, res, next){
   
 app.post('/addVideo/:addVideo', function (req, res, next) {
   console.log("test");
-  if (req.body && req.body.data-genre && req.body.source && req.body.caption) {
+  if (req.body && req.body.genre && req.body.videoSource && req.body.caption) {
     var videoPost = req.params.videoPost.toLowerCase();
     if (videoPostData[videoPost]) {
       videoPostData.push({
-        genre: req.body.data-genre,
-        video: req.body.source,
-        caption: req.body.caption
+        req.body.genre,
+        req.body.videoSource,
+        req.body.caption
       });
     }
     fs.writefile(
