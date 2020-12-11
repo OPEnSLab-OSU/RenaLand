@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv= "X-UA-Compatible" content="ie-edge">        <title>RenaLand</title>
+        <script 
+        src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" charset='utf-8' defer></script>
+        <script src="/videoPostTemplate.js" charset='utf-8' defer></script>
+
+
+        <script src="index.js" charset="utf-8" defer></script>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <div class="header-logo"> 
+                <a href="index.html">
+                    <img src="CS290FPLogo.png" width="280" height="280">
+                </a>
+            </div>
+            <div class="search">
+                <div id="search1">
+                  <object align= right>
+                      <input type="text" name="search" class="type" id="type" placeholder="Search...">
+                      <button id="filter-update-button" class="searchbtn">Search</button>
+                  </object>
+                </div>
+            </div>
+            <div class="genre-box">
+                <div class="genre">
+                    <input type="checkbox" name="type" id="genre-1" value="funny">
+                    <label for="genre-1">Funny</label>
+                </div>
+                <div class="genre">
+                    <input type="checkbox" name="type" id="genre-2" value="cartoon">
+                    <label for="genre-2">Cartoon</label>
+                </div>
+                <div class="genre">
+                    <input type="checkbox" name="type" id="genre-3" value="music">
+                    <label for="genre-3">Music</label>
+                </div>
+                <div class="genre">
+                    <input type="checkbox" name="type" id="genre-4" value="academic">
+                    <label for="genre-4">Academic</label>
+                </div>
+                <div class="genre">
+                    <input type="checkbox" name="type" id="other" value="other">
+                    <label for="other">Others</label>
+                </div>
+            </div>
+            <div class="update">
+                <button id="filter-update-button" class="updatebtn">Update</button>
+            </div>
+        </header>
+
+
+        <main class="body-content">
+            <section id="videos">
+                <div class="video" data-genre="funny">
+                    <div class="video-contents">
+                        <div class="video-url">
+                            <video class='myVideo' width="612" height="612" controls>
+                                    <source src="videos/video19.mp4" type="video/mp4">
+                            </video>
+                            </script>
+                        </div>
+                        <div class="video-caption">
+                            great jokes in English
+                        </div>
+                    </div>
+                </div>
+                <div class="video" data-genre="funny">
+                    <div class="video-contents">
+                        <div class="video-url">
+                            <video class='myVideo' width="612" height="612" controls>
+                                    <source src="videos/video20.mp4" type="video/mp4">
+                            </video>                       
+                        </div>
+                        <div class="video-caption">
+                            funny short clips
+                        </div>
+                    </div>
+                </div>
+                <div class="video" data-genre="music">
+                    <div class="video-contents">
+                        <div class="video-url">
+                            <video class='myVideo' width="612" height="612" controls>
+                                <source src="videos/video21.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-caption">
+                            I wanna grow old with you(westlife mv)
+                        </div>
+                    </div>
+                </div>
+                <div class="video" data-genre="music">
+                        <div class="video-contents">
+                            <div class="video-url">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="videos/video22.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-caption">
+                                I see the light(disney mv)
+                            </div>
+                        </div>
+                </div>
+                <div class="video" data-genre="cartoon">
+                        <div class="video-contents">
+                            <div class="video-url">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="videos/video23.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-caption">
+                                never give up
+                            </div>
+                        </div>
+                </div>
+                <div class="video" data-genre="cartoon">
+                        <div class="video-contents">
+                            <div class="video-url">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="videos/video24.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-caption">
+                                destiny
+                            </div>
+                        </div>
+                </div>
+                <div class="video" data-genre="academic">
+                        <div class="video-contents">
+                            <div class="video-url">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="videos/video25.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-caption">
+                                5 steps to learn a language from scratch
+                            </div>
+                        </div>
+                </div>
+                <div class="video" data-genre="other">
+                        <div class="video-contents">
+                            <div class="video-url">
+                                <video class='myVideo' width="612" height="612" controls>
+                                        <source src="videos/video26.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-caption">
+                                short trip to Mallorca
+                            </div>
+                        </div>
+                </div>
+                <div class="video" data-genre="other">
+                    <div class="video-contents">
+                        <div class="video-url">
+                            <video class='myVideo' width="612" height="612" controls>
+                                    <source src="videos/video27.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-caption">
+                            a holiday vlog
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <button type="button" id="arrow-up"><i class="fas fa-arrow-up"></i></button>
+            <button type="button" id="upload-video"><i class="fas fa-plus-circle"></i></button>
+            <button type="button" id="arrow-down"><i class="fas fa-arrow-down"></i></button>      
+        </footer>
+        <div class="hidden" id="new-video-modal"></div>
+        <div id="modal" class="hidden">
+            <div class="dialog-box">
+                <div class="dialog-header">
+                    <h3>Upload a New Video</h3>
+                    <button type="button" class="dialog-hide-button">&times;</button>
+                </div>
+                <div class="dialog-body">
+                    <div class="new-input-element">
+                        <label for="new-url-input">Video URL</label>
+                        <input type="text" id="new-url-input">
+                    </div>
+                    <div class="new-input-element">
+                        <label for="new-caption-input">Video Caption</label>
+                        <input type="text" id="new-caption-input">
+                    </div>
+                    <div class="new-input-element">
+                        <fieldset class="genre-box-fieldset">
+                            <legend>Genre</legend>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="video-genre-1" value="funny">
+                              <label for="video-genre-1">Funny</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="video-genre-2" value="cartoon">
+                              <label for="video-genre-2">Cartoon</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="video-genre-3" value="music">
+                              <label for="video-genre-3">Music</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="video-genre-4" value="academic">
+                              <label for="video-genre-4">Academic</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="other" value="other">
+                              <label for="other">Other</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="dialog-footer">
+                    <button type="button" class="dialog-hide-button cancel-button">Cancel</button>
+                    <button type="button" class="upload-button">Upload Video</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

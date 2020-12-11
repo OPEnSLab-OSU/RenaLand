@@ -1,47 +1,47 @@
 [
     {
-        "data-genre": "funny",
-        "source" :"videos/video1.mp4",
+        "genre": "funny",
+        "video" :"videos/video1.mp4",
         "caption" : "after seeing my GPA"
     },
     {
-        "data-genre": "funny",
-        "source" :"videos/video2.mp4",
+        "genre": "funny",
+        "video" :"videos/video2.mp4",
         "caption" : "ski mask hip hop"
     },
     {
-        "data-genre": "funny",
-        "source" :"videos/video3.mp4",
+        "genre": "funny",
+        "video" :"videos/video3.mp4",
         "caption" : "crazy with my code"
     },
     {
-        "data-genre": "funny",
-        "source" :"videos/video4.mp4",
+        "genre": "funny",
+        "video" :"videos/video4.mp4",
         "caption" : "double crash"
     },
     {
-        "data-genre": "funny",
-        "source" :"videos/video5.mp4",
+        "genre": "funny",
+        "video" :"videos/video5.mp4",
         "caption" : "mom sick in bed"
     },
     {
-        "data-genre": "academic",
-        "source" :"videos/video6.mp4",
+        "genre": "academic",
+        "video" :"videos/video6.mp4",
         "caption" : "the power of computer science "
     },
     {
-        "data-genre": "music",
-        "source" :"videos/video7.mp4",
+        "genre": "music",
+        "video" :"videos/video7.mp4",
         "caption" : "a whole new world(Aladdin)"
     },
     {
-        "data-genre": "cartoon",
-        "source" :"videos/video8.mp4",
+        "genre": "cartoon",
+        "video" :"videos/video8.mp4",
         "caption" : "watch your feelings"
     },
     {
-        "data-genre": "other",
-        "source" :"videos/video9.mp4",
+        "genre": "other",
+        "video" :"videos/video9.mp4",
         "caption" : "a day in the life of a CS intern"
     }
 
