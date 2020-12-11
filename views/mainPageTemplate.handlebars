@@ -1,0 +1,60 @@
+        <main class="body-content">
+            <section id="videos">
+                    {{#each videoPosts}}
+                    {{>videoPostTemplate}}
+                    {{/each}}
+            </section>
+        </main>
+        <footer>
+            <button type="button" id="arrow-up"><i class="fas fa-arrow-up"></i></button>
+            <button type="button" id="upload-video"><i class="fas fa-plus-circle"></i></button>
+            <button type="button" id="arrow-down"><i class="fas fa-arrow-down"></i></button>      
+        </footer>
+        <div class="hidden" id="new-video-modal"></div>
+        <div id="modal" class="hidden">
+            <div class="dialog-box">
+                <div class="dialog-header">
+                    <h3>Upload a New Video</h3>
+                    <button type="button" class="dialog-hide-button">&times;</button>
+                </div>
+                <div class="dialog-body">
+                    <div class="new-input-element">
+                        <label for="new-url-input">Video URL</label>
+                        <input type="text" id="new-url-input">
+                    </div>
+                    <div class="new-input-element">
+                        <label for="new-caption-input">Video Caption</label>
+                        <input type="text" id="new-caption-input">
+                    </div>
+                    <div class="new-input-element">
+                        <fieldset class="genre-box-fieldset">
+                            <legend>Genre</legend>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="video-genre-1" value="funny" checked>
+                              <label for="video-genre-1">funny</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="video-genre-2" value="cartoon">
+                              <label for="video-genre-2">cartoon</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="video-genre-3" value="music">
+                              <label for="video-genre-3">music</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="video-genre-4" value="academic">
+                              <label for="video-genre-4">academic</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" name="video-genre" id="other" value="other">
+                              <label for="other">other</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="dialog-footer">
+                    <button type="button" class="dialog-hide-button cancel-button">Cancel</button>
+                    <button type="button" class="upload-button">Upload Video</button>
+                </div>
+            </div>
+        </div>
