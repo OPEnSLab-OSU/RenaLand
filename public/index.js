@@ -94,8 +94,9 @@ searchButton.onclick = function() {
   
 }
 
-//uploadVideo.onclick = function() {
-function acceptVideo() {
+
+uploadVideo.onclick = function() {
+//function acceptVideo() {
     if (validInput() == false) {
         alert("Incomplete fields.");
         return;
@@ -103,7 +104,7 @@ function acceptVideo() {
     var videoSource = document.getElementById("new-url-input").value.trim();
     var caption = document.getElementById("new-caption-input").value.trim();
     var videoRequest = new XMLHttpRequest();
-    var reqVideo = '/' + getURL();
+    var reqVideo = '/' + getURL() + "/addVideo";
     videoRequest.open('POST', reqVideo);
 
     var reqBody = JSON.stringify({
@@ -113,7 +114,7 @@ function acceptVideo() {
 
     videoRequest.setRequestHeader('Content-Type', 'application/json');
     videoRequest.addEventListener('load', function (event) {
-        if (event.target.status == 200) {
+        if (event.target.status === 200) {
             var videoTemplate = Handlebars.templates.videoPostTemplate;
             var newVideoHTML = videoTemplate({
                 video: videoSource,
@@ -127,7 +128,7 @@ function acceptVideo() {
         }
     });
     videoRequest.send(reqBody);
-
+    
 }
 
 
