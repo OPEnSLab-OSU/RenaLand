@@ -59,7 +59,7 @@ cancelButton.onclick = function() {
     modalClear();
 
 }
-
+/*
 uploadVideo.onclick = function(caption, video, genre) {
     if (validInput() == false) {
         alert("Incomplete fields.");
@@ -77,7 +77,7 @@ uploadVideo.onclick = function(caption, video, genre) {
     return videoSection;
 
 }
-
+*/
 searchButton.onclick = function() {
     addvideosback();
     var videoArr = document.getElementsByClassName("video");
@@ -104,7 +104,7 @@ uploadVideo.onclick = function() {
     var videoSource = document.getElementById("new-url-input").value.trim();
     var caption = document.getElementById("new-caption-input").value.trim();
     var videoRequest = new XMLHttpRequest();
-    var reqVideo = '/' + getURL() + "/addVideo";
+    var reqVideo = "/addVideo/" + videoSource;
     videoRequest.open('POST', reqVideo);
 
     var reqBody = JSON.stringify({
