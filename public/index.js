@@ -136,8 +136,18 @@ uploadVideo.onclick = function() {
     });
     videoRequest.send(reqBody);
     
+    hideModal();
 }
 
+
+function hideModal() {
+  var modal = document.getElementById('new-video-modal');
+  var modalBackdrop = document.getElementById('modal');
+
+  modal.classList.add('hidden');
+  modalBackdrop.classList.add('hidden');   
+  modalClear();
+}
 
 //get the value of checked box
 function getcheckedbox(a){
