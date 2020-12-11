@@ -1,47 +1,47 @@
 [
     {
         "genre": "funny",
-        "video" :"videos/video1.mp4",
+        "video" :"/videos/video1.mp4",
         "caption" : "after seeing my GPA"
     },
     {
         "genre": "funny",
-        "video" :"videos/video2.mp4",
+        "video" :"/videos/video2.mp4",
         "caption" : "ski mask hip hop"
     },
     {
         "genre": "funny",
-        "video" :"videos/video3.mp4",
+        "video" :"/videos/video3.mp4",
         "caption" : "crazy with my code"
     },
     {
         "genre": "funny",
-        "video" :"videos/video4.mp4",
+        "video" :"/videos/video4.mp4",
         "caption" : "double crash"
     },
     {
         "genre": "funny",
-        "video" :"videos/video5.mp4",
+        "video" :"/videos/video5.mp4",
         "caption" : "mom sick in bed"
     },
     {
         "genre": "academic",
-        "video" :"videos/video6.mp4",
+        "video" :"/videos/video6.mp4",
         "caption" : "the power of computer science "
     },
     {
         "genre": "music",
-        "video" :"videos/video7.mp4",
+        "video" :"/videos/video7.mp4",
         "caption" : "a whole new world(Aladdin)"
     },
     {
         "genre": "cartoon",
-        "video" :"videos/video8.mp4",
+        "video" :"/videos/video8.mp4",
         "caption" : "watch your feelings"
     },
     {
         "genre": "other",
-        "video" :"videos/video9.mp4",
+        "video" :"/videos/video9.mp4",
         "caption" : "a day in the life of a CS intern"
     }
 

@@ -12,7 +12,7 @@ app.engine('handlebars', exphbs({ defaultLayout: 'completeTemplate'}));
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
-
+app.use(express.static(path.join(__dirname, 'videos')))
 
 //renders main page for renaLand
 app.get('/', function(req, res, next){
