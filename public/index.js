@@ -1,3 +1,8 @@
+var videosarray = [];
+var videos = document.getElementsByClassName('video');
+for(var i = 0; i<videos.length; i++){
+    videosarray.push(videos[i]);
+}
 var upButton = document.getElementById("arrow-up");
 var downButton = document.getElementById("arrow-down");
 var uploadButton = document.getElementById("upload-video");
@@ -60,6 +65,7 @@ uploadVideo.onclick = function() {
 }
 
 searchButton.onclick = function() {
+    addvideosback();
     var videoArr = document.getElementsByClassName("video");
     var captionText = document.getElementById("type").value.toLowerCase();
 
@@ -74,23 +80,52 @@ searchButton.onclick = function() {
   
 }
 
+//get the value of checked box
+function getcheckedbox(a){
+    var genrevalue = [];
+    for(var i = 0; i<5; i++){
+        if(document.getElementsByName(a)[i].checked==true){
+            genrevalue.push(document.getElementsByName(a)[i].value);
+        }
+    }
+    return genrevalue;
+}
+//get current videos on the page
+function getcurrentvideos(){
+    var currentvideos = [];
+    var cvs = document.getElementsByClassName('video');
+    for(var i = 0; i<cvs.length; i++){
+        currentvideos.push(cvs[i]);
+    }
+    return currentvideos;
+}
+
+//remove video from the page
+function removevideo(idx){
+    document.getElementById('videos').removeChild(videosarray[idx]);
+}
+
+//store all the original and new videos
+var allvideos = [];
+var avs = document.getElementsByClassName('video');
+for(var i = 0; i<avs.length; i++){
+    allvideos.push(avs[i]);
+}
+
+//re-add back all videos
+function addvideosback(){
+    videosarray = allvideos;
+    for(var i = 0; i<videosarray.length; i++){
+        document.getElementById('videos').appendChild(videosarray[i]);
+    }
+}
 genreButton.onclick = function() {
-    var genreArr = [];
-    var videoArr = document.getElementsByClassName("video");
-    for (var i = videoArr.length - 1; i >= 0; i--) {
-        if (genreArr.length != 0) {
-            var bool = false;
-        }
-        for (var j = genreArr.length - 1; j >= 0; j--) {
-            if (videoArr[i].getAttribute('value') === genreArr[j]) {
-                bool = true;
-            }
-        }
-        if (bool == false) {
-            bool = true;
-        }
-        if (bool == true) {
-            videoArr[i].remove()
+    addvideosback();
+    var genrechecked = getcheckedbox('type');
+    videosarray = getcurrentvideos();
+    for(var i = 0; i<videosarray.length; i++){
+        if(genrechecked.length!=0&&genrechecked.includes(videosarray[i].getAttribute('data-genre'))==false){
+            removevideo(i);
         }
     }
 }
