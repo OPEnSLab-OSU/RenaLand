@@ -5,12 +5,12 @@ var xButton = document.getElementsByClassName("dialog-hide-button")[0];
 var cancelButton = document.getElementsByClassName("dialog-hide-button cancel-button")[0];
 var uploadVideo = document.getElementsByClassName("upload-button")[0];
 var searchButton = document.getElementsByClassName("searchbtn")[0];
+var genreButton = document.getElementsByClassName("updatebtn")[0];
 
 function modalClear() {
     document.getElementById("new-url-input").value = "";
     document.getElementById("new-caption-input").value = "";
 }
-
 
 function validInput() {
     if (
@@ -71,10 +71,31 @@ searchButton.onclick = function() {
             videoArr[i].remove();
         }
     }
-    console.log("Hello");
-
-
+  
 }
+
+genreButton.onclick = function() {
+    var genreArr = [];
+    var videoArr = document.getElementsByClassName("video");
+    for (var i = videoArr.length - 1; i >= 0; i--) {
+        if (genreArr.length != 0) {
+            var bool = false;
+        }
+        for (var j = genreArr.length - 1; j >= 0; j--) {
+            if (videoArr[i].getAttribute('value') === genreArr[j]) {
+                bool = true;
+            }
+        }
+        if (bool == false) {
+            bool = true;
+        }
+        if (bool == true) {
+            videoArr[i].remove()
+        }
+    }
+}
+
+
 
 
 
@@ -97,6 +118,7 @@ let callback = (entries, observer)=>{
         }
     });
 }
+
 let observer = new IntersectionObserver(callback, options);
 observer.observe(document.getElementsByClassName("myVideo")[0]);
 observer.observe(document.getElementsByClassName("myVideo")[1]);
