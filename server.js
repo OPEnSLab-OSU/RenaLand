@@ -40,19 +40,20 @@ app.post('/addVideo/', function (req, res, next) {
         genre: req.body.genre,
         video: req.body.video,
         caption: req.body.caption
-      });
-    fs.writefile(
-      __dirname + '/videoPostData.json',
-      JSON.stringify(videoPostData, null, 2),
-      function (err, data) {
-        if (err) {
-          console.log("--err", err);
-          res.status(500).send("error");
+      });   
+      fs.writefile(
+        __dirname + '/videoPostData.json',
+        JSON.stringify(videoPostData, null, 2),
+        function (err, data) {
+          if (err) {
+            console.log("--err", err);
+            res.status(500).send("error");
+          }
+          else {
+            res.status(200).send("successful");
+          }
         }
-        else {
-          res.status(200).send("successful");
-        }
-    });
+      );
   }
   else {
     next();
