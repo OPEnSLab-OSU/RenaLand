@@ -31,6 +31,7 @@ app.get('/index2.html', function(req, res, next){
   
 app.post('/addVideo/', function (req, res, next) {
   console.log("test");
+  console.log(req.body);
   if (req.body && req.body.genre && req.body.videoSource && req.body.caption) {
 //    var videoPost = req.params.videoPost.toLowerCase();
  //   if (videoPostData[videoPost]) {
