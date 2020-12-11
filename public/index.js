@@ -112,7 +112,8 @@ uploadVideo.onclick = function() {
 
     var reqBody = JSON.stringify({
         video: videoSource,
-        caption: caption
+        caption: caption,
+        genre: genre
     }); 
 
     videoRequest.setRequestHeader('Content-Type', 'application/json');
@@ -121,7 +122,8 @@ uploadVideo.onclick = function() {
             var videoTemplate = Handlebars.templates.videoPostTemplate;
             var newVideoHTML = videoTemplate({
                 video: videoSource,
-                caption: caption
+                caption: caption,
+                genre: genre
             });
             var videoContainer = document.querySelector('.video');
             videoContainer.insertAdjacentElementHTML('beforeend', newVideoHTML);
