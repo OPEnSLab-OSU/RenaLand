@@ -41,26 +41,29 @@ app.post('/addVideo/', function (req, res, next) {
         video: req.body.video,
         caption: req.body.caption
       });   
-      fs.writefile(
-        __dirname + '/videoPostData.json',
-        JSON.stringify(videoPostData, null, 2),
-        function (err, data) {
-          if (err) {
-            console.log("--err", err);
-            res.status(500).send("error");
-          }
-          else {
-            res.status(200).send("successful")
-          }
+ 
+       fs.writeFile(
+            __dirname + '/videoPostData.json',
+            JSON.stringify(videoPostData, null, 2),
+            function (err, data) {
+              if (err) {
+                console.log("  -- err:", err);
+                res.status(500).send("Error saving photo in DB");
+              } else {
+                res.status(200).send("Photo successfully added.")
+              }
+            }
+          );
+        } else {
+          next();
         }
-      );
-   }
-   else {
-     next();
-   } 
-});
+      } else {
+        res.status(400).send("Request body must contain 'url' and 'caption'.")
+      }
+    });
 
-
+        
+  
 
 
 app.get('*', function (req, res, next) {
