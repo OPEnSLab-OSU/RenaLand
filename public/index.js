@@ -237,9 +237,9 @@ observer.observe(document.getElementsByClassName("myVideo")[8]);
 
 
 
-function newVideo (caption, video, genre) {
+/*function newVideo (caption, video, genre) {
 
-}
+}*/
 
 
 
