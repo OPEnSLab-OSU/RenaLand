@@ -103,6 +103,9 @@ uploadVideo.onclick = function() {
     }
     var videoSource = document.getElementById("new-url-input").value.trim();
     var caption = document.getElementById("new-caption-input").value.trim();
+    var genre = document.querySelector('.genre-box-fieldset input:checked').value;
+    
+    
     var videoRequest = new XMLHttpRequest();
     var reqVideo = "/addVideo/" + videoSource;
     videoRequest.open('POST', reqVideo);
