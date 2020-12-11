@@ -12,6 +12,9 @@ var uploadVideo = document.getElementsByClassName("upload-button")[0];
 var searchButton = document.getElementsByClassName("searchbtn")[0];
 var genreButton = document.getElementsByClassName("updatebtn")[0];
 
+
+
+
 function modalClear() {
     document.getElementById("new-url-input").value = "";
     document.getElementById("new-caption-input").value = "";
@@ -57,11 +60,22 @@ cancelButton.onclick = function() {
 
 }
 
-uploadVideo.onclick = function() {
+uploadVideo.onclick = function(caption, video, genre) {
     if (validInput() == false) {
         alert("Incomplete fields.");
         return;
     }
+    var context = {
+        caption: caption,
+        video: video,
+        genre: genre
+    };
+    
+    var videoHTML = Handlebars.templates.post(context);
+    var videoSection = document.getElementById('videos');
+    videoSection.insertAdjacentHTML('beforeend', videoHTML);
+    return videoSection;
+
 }
 
 searchButton.onclick = function() {
@@ -168,17 +182,7 @@ observer.observe(document.getElementsByClassName("myVideo")[8]);
 
 
 
-function newVideo (caption, videoFile, genre) {
-    var context = {
-        caption: caption,
-        video: videoFile,
-        genre: genre
-    };
-    
-    var videoHTML = Handlebars.templates.post(context);
-    var videoSection = document.getElementById('videos');
-    videoSection.insertAdjacentHTML('beforeend', videoHTML);
-    return videoSection;
+function newVideo (caption, video, genre) {
 
 }
 
