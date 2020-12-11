@@ -20,22 +20,20 @@ app.get('/', function(req, res, next){
   });
 
 
-app.get('*', function (req, res, next) {
-  res.status(404).render('404Template.handlebars');
-  });
+
   
 
 app.post('/addVideo', function (req, res, next) {
   console.log("test");
-  if (req.body && req.body.data-genre && req.body.source && req.body.caption) {
+  if (req.body && req.body.genre && req.body.video && req.body.caption) {
     var videoPost = req.params.videoPost.toLowerCase();
     if (videoPostData[videoPost]) {
       videoPostData.push({
-        genre: req.body.data-genre,
-        video: req.body.source,
+        genre: req.body.genre,
+        video: req.body.video,
         caption: req.body.caption
       });
-    }
+    
     fs.writefile(
       __dirname + '/videoPostData.json',
       JSON.stringify(videoPostData, null, 2),
@@ -53,11 +51,17 @@ app.post('/addVideo', function (req, res, next) {
   else {
     next();
   }
+}
+else{
+  res.status(400).send("Request body must contain 'video' 'genre' and 'caption'.")
+}});
+
+
+
+
+app.get('*', function (req, res, next) {
+  res.status(404).render('404Template');
 });
-
-
-
-
 
 
 app.listen(port, function () {
