@@ -107,7 +107,7 @@ uploadVideo.onclick = function() {
     
     
     var videoRequest = new XMLHttpRequest();
-    var reqVideo = "/addVideo/" + videoSource;
+    var reqVideo = "/addVideo/";
     videoRequest.open('POST', reqVideo);
 
     var reqBody = JSON.stringify({
