@@ -32,13 +32,13 @@ app.get('/index2.html', function(req, res, next){
 app.post('/addVideo/', function (req, res, next) {
   console.log("test");
   console.log(req.body);
-  if (req.body && req.body.genre && req.body.videoSource && req.body.caption) {
+  if (req.body && req.body.genre && req.body.video && req.body.caption) {
 //    var videoPost = req.params.videoPost.toLowerCase();
  //   if (videoPostData[videoPost]) {
     if (videoPostData) {
       videoPostData.push({
         genre: req.body.genre,
-        video: req.body.videoSource,
+        video: req.body.video,
         caption: req.body.caption
       });
     }
