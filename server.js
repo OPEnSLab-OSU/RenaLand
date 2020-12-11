@@ -29,7 +29,7 @@ app.get('/index2.html', function(req, res, next){
   res.status(200).render('mainPageTemplate', {videoPosts: videoPostData2});
 });
   
-app.post('/addVideo/:addVideo', function (req, res, next) {
+app.post('/addVideo/', function (req, res, next) {
   console.log("test");
   if (req.body && req.body.genre && req.body.videoSource && req.body.caption) {
     var videoPost = req.params.videoPost.toLowerCase();
