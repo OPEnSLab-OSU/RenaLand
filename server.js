@@ -22,22 +22,21 @@ app.get('/', function(req, res, next){
 
 
   
-
-app.post('/addVideo', function (req, res, next) {
+app.post('/:addVideo', function (req, res, next) {
   console.log("test");
-  if (req.body && req.body.genre && req.body.video && req.body.caption) {
+  if (req.body && req.body.data-genre && req.body.source && req.body.caption) {
     var videoPost = req.params.videoPost.toLowerCase();
     if (videoPostData[videoPost]) {
       videoPostData.push({
-        genre: req.body.genre,
-        video: req.body.video,
+        genre: req.body.data-genre,
+        video: req.body.source,
         caption: req.body.caption
       });
-    
+    }
     fs.writefile(
       __dirname + '/videoPostData.json',
       JSON.stringify(videoPostData, null, 2),
-      function (err,data) {
+      function (err, data) {
         if (err) {
           console.log("--err", err);
           res.status(500).send("error");
@@ -51,10 +50,7 @@ app.post('/addVideo', function (req, res, next) {
   else {
     next();
   }
-}
-else{
-  res.status(400).send("Request body must contain 'video' 'genre' and 'caption'.")
-}});
+});
 
 
 
