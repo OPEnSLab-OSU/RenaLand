@@ -41,7 +41,6 @@ app.post('/addVideo/', function (req, res, next) {
         video: req.body.video,
         caption: req.body.caption
       });
-    }
     fs.writefile(
       __dirname + '/videoPostData.json',
       JSON.stringify(videoPostData, null, 2),
