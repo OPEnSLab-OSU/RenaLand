@@ -1,0 +1,47 @@
+[
+    {
+        "genre":"funny",
+        "video":"/videos/video10.mp4",
+        "caption": "among-us funny moments"
+    },
+    {
+        "genre":"funny",
+        "video":"/videos/video11.mp4",
+        "caption":"top 10 school jokes"
+    },
+    {
+        "genre":"funny",
+        "video":"/videos/video12.mp4",
+        "caption":"have you ever had a dream like this?"
+    },
+    {
+        "genre":"cartoon",
+        "video":"/videos/video13.mp4",
+        "caption":"do not be angry"
+    },
+    {
+        "genre":"cartoon",
+        "video":"/videos/video14.mp4",
+        "caption":"the present"
+    },
+    {
+        "genre":"music",
+        "video":"/videos/video15.mp4",
+        "caption":"back at one mv"
+    },
+    {
+        "genre":"academic",
+        "video":"/videos/video16.mp4",
+        "caption":"learn React JS in 5 minutes"
+    },
+    {
+        "genre":"other",
+        "video":"/videos/video17.mp4",
+        "caption":"4 meals anyone can make"
+    },
+    {
+        "genre":"other",
+        "video":"/videos/video18.mp4",
+        "caption":"5 min cardio workout for fat loss"
+    }
+]

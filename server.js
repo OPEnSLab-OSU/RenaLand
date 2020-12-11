@@ -3,6 +3,8 @@ var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var videoPostData = require('./videoPostData.json');
+var videoPostData1 = require('./videoPostData1.json');
+var videoPostData2 = require('./videoPostData2.json');
 
 var app = express();
 var port = process.env.PORT || 8000;
@@ -19,8 +21,13 @@ app.get('/', function(req, res, next){
     res.status(200).render('mainPageTemplate',{videoPosts: videoPostData});
   });
 
+app.get('/index1.html', function(req, res, next){
+  res.status(200).render('mainPageTemplate', {videoPosts: videoPostData1});
+});
 
-
+app.get('/index2.html', function(req, res, next){
+  res.status(200).render('mainPageTemplate', {videoPosts: videoPostData2});
+});
   
 app.post('/:addVideo', function (req, res, next) {
   console.log("test");
