@@ -35,9 +35,9 @@ app.post('/addVideo/:addVideo', function (req, res, next) {
     var videoPost = req.params.videoPost.toLowerCase();
     if (videoPostData[videoPost]) {
       videoPostData.push({
-        req.body.genre,
-        req.body.videoSource,
-        req.body.caption
+        genre: req.body.genre,
+        video: req.body.videoSource,
+        caption: req.body.caption
       });
     }
     fs.writefile(
