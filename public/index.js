@@ -126,7 +126,7 @@ uploadVideo.onclick = function() {
                 genre: genre
             });
             var videoContainer = document.querySelector('.body-content');
-            videoContainer.insertAdjacentElementHTML('beforeend', newVideoHTML);
+            videoContainer.insertAdjacentHTML('beforeend', newVideoHTML);
         }
         else {
             alert("Error: " + event.target.response);
