@@ -125,7 +125,7 @@ uploadVideo.onclick = function() {
                 caption: caption,
                 genre: genre
             });
-            var videoContainer = document.querySelector('.body-content');
+            var videoContainer = document.querySelector('#videos');
             videoContainer.insertAdjacentHTML('beforeend', newVideoHTML);
         }
         else {
