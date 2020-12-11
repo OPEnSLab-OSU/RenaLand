@@ -50,14 +50,14 @@ app.post('/addVideo/', function (req, res, next) {
             res.status(500).send("error");
           }
           else {
-            res.status(200).send("successful");
+            res.status(200).send("successful")
           }
         }
       );
-  }
-  else {
-    next();
-  }
+   }
+   else {
+     next();
+   } 
 });
 
 
